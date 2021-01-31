@@ -18,12 +18,13 @@ namespace ChopperDrop
 
         public int time;
         public string dropText;
+        public int minPlayers;
         public List<CoroutineHandle> coroutines = new List<CoroutineHandle>();
 
         public bool roundStarted = false;
         public Dictionary<ItemType, int> allowedItems;
-        public EventHandlers(Plugin<Config> plugin, Dictionary<ItemType,int> drops, int tim, string dropTex, int minPly) 
-        { 
+        public EventHandlers(Plugin<Config> plugin, Dictionary<ItemType, int> drops, int tim, string dropTex, int minPly)
+        {
             pl = plugin;
             allowedItems = drops;
             time = tim;
